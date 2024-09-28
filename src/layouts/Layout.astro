@@ -15,12 +15,12 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="bg-neutral-900">
     <!-- <slot /> -->
-    <header class="bg-slate-800 h-11 text-gray-100">
-      <div class=" mx-auto container h-full max-w-[1200px] flex items-center w-full justify-between">
+    <header class="bg-black h-20 text-gray-100">
+      <div class=" mx-auto container h-full max-w-[1150px] flex items-center w-full justify-between">
         <svg
-        class="w-28 fill-slate-500"
+        class="w-32 fill-white"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 823.46 225.25"
           ><g fill-rule="evenodd" class="svelte-1gcdbl9"
@@ -36,17 +36,37 @@ const { title } = Astro.props;
           ></svg
         >
         <menu class="flex h-full gap-5">
-          <li class="flex"><a href="#" class="hover:text-slate-300 flex items-center text-slate-50 no-underline ">Premiun</a></li>
-          <li class="flex"><a href="#" class="hover:text-slate-300 flex items-center text-slate-50 no-underline ">Support</a></li>
-          <li class="flex"><a href="#" class="hover:text-slate-300 flex items-center text-slate-50 no-underline ">Download</a></li>
-          <li class="flex">|</li>
-          <li class="flex"><a href="#" class="hover:text-slate-300 flex items-center text-slate-50 no-underline ">Sign up</a></li>
-          <li class="flex"><a href="#" class="hover:text-slate-300 flex items-center text-slate-50 no-underline ">Log in</a></li>
+          <li class="flex relative group">
+            <a href="#" class="hover:text-green-500 flex items-center text-slate-50 no-underline ">Premiun</a>
+            <div class="absolute group-hover:block hidden top-[42px] bg-slate-800 w-60">
+              <a href="#" class="hover:bg-slate-900 block py-3 px-4 text-lg text-white">
+                Premium individual
+                <span class="block text-xs">1 cuenta para una sola persona</span>
+              </a>
+              <a href="#" class="hover:bg-slate-900 block py-3 px-4 text-lg text-white">
+                Premium Duo
+                <span class="block text-xs">2 cuentas para parejas que viven en el mismo domicilio</span>
+              </a>
+              <a href="#" class="hover:bg-slate-900 block py-3 px-4 text-lg text-white">
+                Premium Familiar
+                <span class="block text-xs">6 cuentas para familiares que viven en el mismo domicilio</span>
+              </a>
+              <a href="#" class="hover:bg-slate-900 block py-3 px-4 text-lg text-white">
+                Premium para Estudiantes
+                <span class="block text-xs">1 cuenta con descuento para estudiante que cumplen los requisitos</span>
+              </a>
+            </div>
+          </li>
+          <li class="flex"><a href="#" class="hover:text-green-500 flex items-center text-slate-50 no-underline ">Support</a></li>
+          <li class="flex"><a href="#" class="hover:text-green-500 flex items-center text-slate-50 no-underline ">Download</a></li>
+          <li class="flex"><p class="items-center flex">|</p></li>
+          <li class="flex"><a href="#" class="hover:text-green-500 flex items-center text-slate-50 no-underline ">Sign up</a></li>
+          <li class="flex"><a href="#" class="hover:text-green-500 flex items-center text-slate-50 no-underline ">Log in</a></li>
         </menu>
       </div>
     </header>
 
-    <div
+    <!-- <div
       class="group items-center inline-flex ntransition-colors hover:cursor-pointer hover:bg-blue-700 bg-blue-600 text-white px-2 py-1 rounded"
     >
       <svg
@@ -78,7 +98,26 @@ const { title } = Astro.props;
           stroke-linejoin="round"
           d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
       </svg>
+    </div> -->
+
+    <div class=" h-[370px]  bg-gradient-to-b from-red-200/65 to-neutral-900 to-40% flex leading-[50px] justify-between">
+      <header>
+      <h1 class="text-white text-[50px] w-[550px] ml-[400px] mt-10">Disfruta de tu contenido favorito sin límites. Prueba Premium individual gratis durante 1 mes.</h1>
+      <p class="text-white ml-[400px]">Despues, solo 16.900 COP/mes. Cancela cuando quieras.</p>
+    </header>
+      <img src="https://wwwmarketing.scdn.co/static/images/premium/desktop-album-evergreen-1x.png" alt="" class="h-[400px] w-[850px]">
     </div>
+
+    <header class="ml-[400px] ">
+    <div class="hover:scale-105 transition-transform hover:cursor-pointer hover:bg-red-100 font-bold py-3 px-4 rounded-full bg-red-200 inline-block ">Probar gratis durante 1 mes</div>
+    <div class="hover:scale-105 transition-transform hover:cursor-pointer font-bold py-3 px-4 rounded-full bg-black inline-block text-white border-gray-500 border">Ver todos los planes</div>
+    
+    <p class="text-[13px] w-[360px] mt-5 text-white">Gratis durante 1 mes. Luego, 16.900 COP. Oferta disponible solo si no has probado Premium. <a href="#" class="underline">consulta las condiciones</a></p>
+    <div class="text-center mt-32 mr-64">
+    <h1 class="text-5xl leading-20 text-white">Siente la diferencia</h1>
+    <h6 class="text-white w-[500px]">Pásate a Premium y disfruta del control total de lo que escuchas. Cancela cuando quieras.</h6>
+  </div>
+  </header>
   </body>
 </html>
 
@@ -136,4 +175,5 @@ const { title } = Astro.props;
   .space-between {
     justify-content: space-between;
   }
-</style> -->
+</style>
+-->
